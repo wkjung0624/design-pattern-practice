@@ -1,14 +1,12 @@
-package ch04.pizza.impl;
+package ch04.pizza;
 
-import ch04.pizza.Pizza;
-
-public class PepperoniPizza extends Pizza {
-	public PepperoniPizza(){
-		super.setProductName("정통 미국식 페페로니 피자");
+public abstract class VeggiePizza extends Pizza {
+	public VeggiePizza(){
+		super.setProductName("신선함이 가득한 채소 피자");
 	}
 	@Override
 	public void prepare(){
-		System.out.println("짭쪼름한 페페로니를 가져왔습니다.");
+		System.out.println("건강에 좋은 채소를 가져왔습니다.");
 		System.out.println("도우를 얇게 폈습니다.");
 		System.out.println("피자를 구울 준비가 다 됐습니다!");
 	}

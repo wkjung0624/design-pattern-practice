@@ -1,13 +1,13 @@
 package ch04;
 
 import ch04.pizza.Pizza;
-import ch04.pizza.PizzaStore;
-import ch04.pizza.SimplePizzaFactory;
+import ch04.store.PizzaStore;
+import ch04.store.impl.CaliforniaStylePizzaStore;
 
 public class FactoryPattern {
 	public static void main(String[] args) {
 
-		PizzaStore pizzaStore = new PizzaStore(SimplePizzaFactory.getInstance());
+		PizzaStore pizzaStore = new CaliforniaStylePizzaStore();
 
 		Pizza myPizza = pizzaStore.orderPizza("clam");
 

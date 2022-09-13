@@ -1,8 +1,6 @@
-package ch04.pizza.impl;
+package ch04.pizza;
 
-import ch04.pizza.Pizza;
-
-public class ClamPizza extends Pizza {
+public abstract class ClamPizza extends Pizza {
 	public ClamPizza(){
 		super.setProductName("바다사랑 조개피자");
 	}
