@@ -17,6 +17,6 @@ public abstract class PizzaStore {
 		return pizza;
 	}
 
-	public abstract Pizza createPizza(String type); // 팩토리 객체 대신 이 메서드를 사용함,
+	protected abstract Pizza createPizza(String type); // 팩토리 객체 대신 이 메서드를 사용함,
 
 }

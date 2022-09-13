@@ -9,7 +9,7 @@ import ch04.store.PizzaStore;
 
 public class ChicagoStylePizzaStore extends PizzaStore {
 	@Override
-	public Pizza createPizza(String type){
+	protected Pizza createPizza(String type){
 		Pizza pizza = null;
 
 		switch (type) {
