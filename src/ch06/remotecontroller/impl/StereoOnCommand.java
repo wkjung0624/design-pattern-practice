@@ -13,5 +13,8 @@ public class StereoOnCommand implements Command {
 	@Override
 	public void execute() {
 		stereo.turnOn();
+		stereo.setCD();
+		stereo.setMusic();
+		stereo.setVolume(10);
 	}
 }
