@@ -5,10 +5,6 @@ import ch06.external.Light;
 import ch06.external.LivingRoom;
 import ch06.external.Stereo;
 import ch06.remotecontroller.RemoteControl;
-import ch06.remotecontroller.impl.GarageDoorCloseCommand;
-import ch06.remotecontroller.impl.GarageDoorOpenCommand;
-import ch06.remotecontroller.impl.LightOffCommand;
-import ch06.remotecontroller.impl.LightOnCommand;
 import ch06.remotecontroller.impl.StereoOffCommand;
 import ch06.remotecontroller.impl.StereoOnCommand;
 
@@ -21,18 +17,12 @@ public class RemoteControlTest {
 		LivingRoom livingRoom = new LivingRoom();
 		Stereo stereo = new Stereo();
 
-		LightOnCommand lightOn = new LightOnCommand(light);
-		LightOffCommand lightOff = new LightOffCommand(light);
-		LightOnCommand livingRoomOn = new LightOnCommand(livingRoom);
-		LightOffCommand livingRoomOff = new LightOffCommand(livingRoom);
-		GarageDoorOpenCommand garageOpen = new GarageDoorOpenCommand(garageDoor);
-		GarageDoorCloseCommand garageClose = new GarageDoorCloseCommand(garageDoor);
 		StereoOnCommand stereoOn = new StereoOnCommand(stereo);
 		StereoOffCommand stereoOff = new StereoOffCommand(stereo);
 
-		remote.setCommand(0, lightOn, lightOff);
-		remote.setCommand(1, livingRoomOn, livingRoomOff);
-		remote.setCommand(2, garageOpen, garageClose);
+		remote.setCommand(0, light::on, light::off);
+		remote.setCommand(1, livingRoom::on, livingRoom::off);
+		remote.setCommand(2, garageDoor::up, garageDoor::down);
 		remote.setCommand(3, stereoOn, stereoOff);
 
 		System.out.println(remote);
