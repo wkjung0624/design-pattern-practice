@@ -1,4 +1,4 @@
-package ch06.remotecontroller.impl;
+package ch06.remotecontroller.command.impl;
 
 import ch06.remotecontroller.Command;
 import ch06.external.Light;
@@ -13,5 +13,9 @@ public class LightOnCommand implements Command {
 	@Override
 	public void execute() {
 		light.on();
+	}
+	@Override
+	public void undo(){
+		light.off();
 	}
 }

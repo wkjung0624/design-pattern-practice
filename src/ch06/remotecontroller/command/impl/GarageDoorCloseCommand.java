@@ -1,4 +1,4 @@
-package ch06.remotecontroller.impl;
+package ch06.remotecontroller.command.impl;
 
 import ch06.external.GarageDoor;
 import ch06.remotecontroller.Command;
@@ -13,5 +13,10 @@ public class GarageDoorCloseCommand implements Command {
 	@Override
 	public void execute() {
 		garageDoor.down();
+	}
+
+	@Override
+	public void undo(){
+		garageDoor.up();
 	}
 }
