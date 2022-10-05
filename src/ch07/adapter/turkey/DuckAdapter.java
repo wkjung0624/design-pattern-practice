@@ -4,7 +4,7 @@ import ch07.adapter.duck.Duck;
 import java.util.Random;
 
 public class DuckAdapter implements Turkey {
-	Duck duck;
+	final Duck duck;
 	Random rand;
 	public DuckAdapter(Duck duck){
 		rand = new Random();

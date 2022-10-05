@@ -3,7 +3,7 @@ package ch07.adapter.duck;
 import ch07.adapter.turkey.Turkey;
 
 public class TurkeyAdapter implements Duck {
-	public Turkey turkey;
+	final Turkey turkey;
 
 	public TurkeyAdapter(Turkey turkey){
 		this.turkey = turkey;
