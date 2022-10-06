@@ -1,8 +1,8 @@
 package ch08.caffeine.impl;
 
-import ch08.caffeine.CaffeineBeverage;
+import ch08.caffeine.CaffeineBeverageWithHook;
 
-public class Tea extends CaffeineBeverage {
+public class Tea extends CaffeineBeverageWithHook {
 
 	public Tea(String name) {
 		super(name);

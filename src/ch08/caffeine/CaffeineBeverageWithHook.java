@@ -1,9 +1,9 @@
 package ch08.caffeine;
 
-public abstract class CaffeineBeverage {
+public abstract class CaffeineBeverageWithHook {
 	protected String name;
 
-	protected CaffeineBeverage(String name){
+	protected CaffeineBeverageWithHook(String name){
 		this.name = name;
 	}
 	protected final void prepareRecipe() {
@@ -13,7 +13,9 @@ public abstract class CaffeineBeverage {
 		boilWater();
 		brew();
 		pourInCup();
-		addCondiments();
+		if (customerWantsCondiments()) {
+			addCondiments();
+		}
 		System.out.println("-------------------\n");
 	}
 
@@ -24,5 +26,8 @@ public abstract class CaffeineBeverage {
 	}
 	protected void pourInCup() {
 		System.out.println("(고정)컵에 따르는 중");
+	}
+	protected boolean customerWantsCondiments() {
+		return true;
 	}
 }
